@@ -1,0 +1,153 @@
+Main.tex:
+
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+
+\sloppy
+
+\title{DoaUniforme: Plataforma Comunitária e Sustentável para Doação de Uniformes Escolares}
+
+\author{
+Fellipe R.\inst{1},
+Maria Luiza\inst{1},
+Davi\inst{1},
+Luiz Gustavo\inst{1},
+Leandro\inst{1}
+}
+
+\address{
+Instituto Federal de Mato Grosso -- IFMT\\
+Curso Técnico Integrado ao Ensino Médio\\
+Grupo 04
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper presents the theoretical foundation and planning of DoaUniforme, a community-based web platform designed to connect families who have school uniforms in good condition with students who need them. The proposal addresses difficulties related to the distribution of school uniforms while encouraging clothing reuse and circular economy practices. The platform organizes donations through item registration, school identification, size, condition and collection points, contributing to social inclusion, family support and the reduction of unnecessary textile waste.
+\end{abstract}
+
+\begin{resumo}
+Este artigo apresenta a fundamentação teórica e o planejamento da plataforma DoaUniforme, uma solução web comunitária desenvolvida para conectar famílias que possuem uniformes escolares em boas condições com estudantes que necessitam dessas peças. A proposta busca contribuir para a redução dos impactos causados por dificuldades na distribuição de uniformes, ao mesmo tempo em que incentiva o reaproveitamento de roupas e práticas de economia circular. A plataforma organiza as doações por meio do cadastro de peças, identificação da escola, tamanho, estado de conservação e pontos de entrega, contribuindo para a inclusão social, o apoio às famílias e a redução do descarte de produtos têxteis.
+\end{resumo}
+
+\section{Introdução}
+
+O uniforme escolar constitui um dos recursos presentes na rotina de muitos estudantes da rede pública. Além de contribuir para a identificação dos alunos e para a padronização do ambiente escolar, sua disponibilidade pode representar uma preocupação para famílias que dependem da distribuição realizada pelas instituições públicas.
+
+Entretanto, a distribuição de uniformes pode enfrentar dificuldades relacionadas à aquisição, produção, processos administrativos e logística. Em fevereiro de 2026, o portal G1 publicou uma reportagem sobre municípios do interior de São Paulo que enfrentavam problemas relacionados à falta de uniformes escolares, destacando possíveis responsabilidades das administrações municipais \cite{g1uniformes2026}. A situação demonstra que dificuldades na disponibilização dessas peças podem afetar estudantes e suas famílias.
+
+Outro aspecto relacionado ao problema é o reaproveitamento. Uniformes deixam de servir principalmente devido ao crescimento dos estudantes, mesmo quando ainda estão em boas condições. A Prefeitura de Imbé orienta que peças sem uso, mas em condições adequadas, sejam devolvidas às escolas para posterior distribuição a outros estudantes \cite{imbe2026}. Esse tipo de iniciativa demonstra que a redistribuição pode auxiliar famílias e evitar o descarte prematuro.
+
+Nesse contexto, propõe-se a plataforma DoaUniforme, uma aplicação web destinada a conectar pessoas que possuem uniformes disponíveis para doação com famílias que procuram essas peças. A plataforma permitirá organizar informações como escola, tipo de uniforme, tamanho e estado de conservação, facilitando a localização dos itens.
+
+A proposta também se relaciona à economia circular, que incentiva práticas de compartilhamento, reuso, redistribuição e reciclagem \cite{mdic2024}. Dessa forma, o reaproveitamento de uniformes pode ampliar a vida útil das peças e reduzir desperdícios.
+
+\section{Justificativa}
+
+A plataforma DoaUniforme justifica-se pela existência de uma necessidade social e de uma oportunidade de utilização da tecnologia para aproximar oferta e demanda. Enquanto algumas famílias podem precisar de uniformes, outras possuem peças que não são mais utilizadas, mas continuam em condições adequadas.
+
+A ausência de um espaço organizado para conectar esses dois grupos pode dificultar a localização das peças disponíveis. Uma plataforma digital pode centralizar essas informações e permitir que os usuários realizem buscas de acordo com suas necessidades.
+
+Além do benefício social, o projeto apresenta relevância ambiental. O reaproveitamento de uniformes contribui para prolongar a vida útil das peças e reduzir o descarte de produtos que ainda podem ser utilizados. A economia circular incentiva justamente práticas que mantenham produtos e materiais em uso por mais tempo \cite{mdic2024}.
+
+Assim, o DoaUniforme pretende transformar uma prática comunitária de doação em um processo mais organizado e acessível, facilitando o contato entre doadores e famílias interessadas.
+
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+
+Planejar uma plataforma web comunitária capaz de conectar doadores e famílias que necessitam de uniformes escolares, facilitando a doação, busca e redistribuição de peças em boas condições.
+
+\subsection{Objetivos Específicos}
+
+\begin{itemize}
+    \item Permitir o cadastro de uniformes disponíveis para doação;
+    \item Organizar as peças por escola, tipo, tamanho e estado de conservação;
+    \item Permitir a pesquisa de uniformes conforme as necessidades dos usuários;
+    \item Facilitar a comunicação entre doadores e interessados;
+    \item Auxiliar na organização de pontos de entrega;
+    \item Incentivar o reaproveitamento de uniformes escolares;
+    \item Contribuir para a redução do descarte de peças reutilizáveis.
+\end{itemize}
+
+\section{Levantamento de Requisitos}
+
+O levantamento de requisitos define as principais funcionalidades e características da plataforma DoaUniforme. Os requisitos são divididos em funcionais e não funcionais.
+
+\subsection{Requisitos Funcionais}
+
+\begin{itemize}
+    \item \textbf{RF01 -- Cadastro de usuário:} permitir o cadastro de usuários com nome, e-mail e senha.
+    
+    \item \textbf{RF02 -- Autenticação:} permitir que usuários cadastrados realizem login.
+    
+    \item \textbf{RF03 -- Cadastro de uniforme:} permitir o registro de peças com tipo, tamanho, escola, estado de conservação e descrição.
+    
+    \item \textbf{RF04 -- Consulta:} permitir a visualização dos uniformes disponíveis.
+    
+    \item \textbf{RF05 -- Busca e filtros:} permitir pesquisas por escola, tipo, tamanho e situação do item.
+    
+    \item \textbf{RF06 -- Solicitação:} permitir que usuários interessados demonstrem interesse em uma peça.
+    
+    \item \textbf{RF07 -- Atualização:} permitir a alteração dos dados de uma peça cadastrada.
+    
+    \item \textbf{RF08 -- Exclusão:} permitir a remoção de peças que não estejam mais disponíveis.
+    
+    \item \textbf{RF09 -- Status:} permitir classificar uma peça como disponível, reservada ou doada.
+    
+    \item \textbf{RF10 -- Administração:} permitir ao administrador gerenciar usuários e peças.
+    
+    \item \textbf{RF11 -- Pontos de coleta:} permitir o cadastro e consulta de locais de entrega ou retirada.
+\end{itemize}
+
+\subsection{Requisitos Não Funcionais}
+
+\begin{itemize}
+    \item \textbf{RNF01 -- Tecnologia:} utilizar Java e Spring Boot.
+    
+    \item \textbf{RNF02 -- Arquitetura:} utilizar o padrão MVC com Spring MVC.
+    
+    \item \textbf{RNF03 -- Banco de dados:} utilizar MySQL com Spring Data JPA.
+    
+    \item \textbf{RNF04 -- Interface:} utilizar HTML5, CSS3, Bootstrap e Thymeleaf.
+    
+    \item \textbf{RNF05 -- Usabilidade:} apresentar uma interface simples e organizada.
+    
+    \item \textbf{RNF06 -- Responsividade:} adaptar as páginas a diferentes tamanhos de tela.
+    
+    \item \textbf{RNF07 -- Segurança:} proteger as informações de autenticação e os dados dos usuários.
+    
+    \item \textbf{RNF08 -- Manutenibilidade:} organizar o código em camadas para facilitar futuras alterações.
+\end{itemize}
+
+\section{Proposta da Solução}
+
+A plataforma DoaUniforme será uma aplicação web destinada a facilitar a doação e o recebimento de uniformes escolares. Os principais usuários serão doadores, famílias interessadas e administradores.
+
+O doador poderá cadastrar uma peça informando escola, tipo, tamanho, estado de conservação e descrição. Após o cadastro, o uniforme ficará disponível para consulta.
+
+Os interessados poderão pesquisar os itens utilizando filtros, como escola, tamanho e tipo de peça. Ao encontrar um uniforme adequado, poderão demonstrar interesse e iniciar o processo de recebimento.
+
+A entrega poderá ocorrer em pontos de coleta cadastrados na plataforma ou em locais definidos pela comunidade escolar. O sistema permitirá atualizar o status da peça, indicando se ela está disponível, reservada ou doada.
+
+O sistema será desenvolvido utilizando Java, Spring Boot, Spring MVC e Spring Data JPA no back-end. A interface utilizará Thymeleaf, HTML5, CSS3 e Bootstrap, enquanto os dados serão armazenados no MySQL. Essa estrutura permitirá implementar as operações de cadastro, consulta, alteração e exclusão necessárias ao funcionamento da plataforma.
+
+\section{Considerações Finais}
+
+A plataforma DoaUniforme apresenta uma proposta tecnológica voltada à conexão entre famílias que possuem uniformes escolares disponíveis e estudantes que necessitam dessas peças. Notícias e iniciativas existentes demonstram que dificuldades na distribuição e possibilidades de reaproveitamento de uniformes são situações presentes em diferentes comunidades escolares \cite{g1uniformes2026,imbe2026}.
+
+A solução proposta não pretende substituir as políticas públicas de distribuição, mas oferecer uma alternativa comunitária complementar. Ao centralizar informações sobre peças disponíveis, o sistema pode facilitar as doações e melhorar a organização da redistribuição.
+
+A proposta também está alinhada aos princípios da economia circular, pois busca ampliar a vida útil dos uniformes por meio do reuso e da redistribuição \cite{mdic2024}. Como próximas etapas, serão desenvolvidos os diagramas UML, o Diagrama de Entidade-Relacionamento e a aplicação web utilizando as tecnologias definidas no projeto.
+
+\bibliographystyle{sbc}
+\bibliography{sbc-template}
+
+\end{document}
